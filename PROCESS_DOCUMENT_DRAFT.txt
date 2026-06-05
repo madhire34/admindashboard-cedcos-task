@@ -1,0 +1,65 @@
+Sales Dashboard Build Process
+
+1) What I understood from the task
+I understood that I had to build a small admin dashboard for an e-commerce system named ShopAdmin. The dashboard needed to show total orders, total revenue, new customers this month, and top 3 best-selling products. I also added the optional filter to switch data by Today, This Week, and This Month.
+
+2) What I decided to build and why
+I built a full-stack project with:
+- React frontend for the dashboard UI
+- Node.js + Express backend to serve data through API
+I chose this because the task asked for frontend and backend, and this stack is simple and common in industry projects.
+
+3) Planning before coding
+Before writing code, I made a short plan:
+- Create project folders for frontend and backend
+- Build backend API first with dummy data and period filtering
+- Build frontend UI cards, product list, and bar chart
+- Connect frontend to backend API
+- Add README and process document
+
+4) Language, tools, and framework used
+- JavaScript for both frontend and backend
+- React (with Vite) for quick frontend setup
+- Express for backend API
+- CSS for simple dashboard design
+- Git and GitHub for version control
+
+5) AI tools usage
+I used AI assistance for:
+- Structuring the project quickly
+- Generating initial component and API structure
+- Reviewing code cleanliness and simplification
+I verified and adjusted the code myself to ensure I understood each part.
+
+6) Day-by-day log
+Day 1
+- Read task carefully
+- Planned feature list and app structure
+- Created project folders
+
+Day 2
+- Built backend API with hardcoded sales data
+- Added period filter support: today, week, month
+- Tested API endpoints
+
+Day 3
+- Built React dashboard interface
+- Added metric cards, top products list, and bar chart
+- Connected filter buttons with backend API
+- Final testing and documentation
+
+7) Hardest part and how I solved it
+The most challenging part was keeping frontend and backend data format aligned for all filter options. I solved this by using one consistent response shape from backend and mapping it directly in frontend UI.
+
+8) Final project status
+Working features:
+- Dashboard cards for orders, revenue, and new customers
+- Top 3 products section
+- Bar chart for category revenue
+- Today/Week/Month filter connected to backend
+
+If I had more time:
+- Add authentication for admin login
+- Connect real database instead of dummy data
+- Add date range picker and CSV export
+- Add unit tests and deployment
