@@ -13,7 +13,10 @@ const PORT = Number(process.env.PORT || 5000);
 const JWT_SECRET = process.env.JWT_SECRET || "shopadmin_secret_key";
 const TOKEN_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "12h";
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
 app.use(express.json());
 
 function authenticateToken(req, res, next) {
