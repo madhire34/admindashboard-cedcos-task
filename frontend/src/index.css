@@ -1,9 +1,55 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: dark;
+}
+
+html,
 body {
   margin: 0;
-  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
-  background: #f3f4f6;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  background: #080a09;
+  color: #eaf1e8;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: #c9f558;
+  color: #080a09;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #223028;
+  border-radius: 999px;
+  border: 2px solid #080a09;
 }

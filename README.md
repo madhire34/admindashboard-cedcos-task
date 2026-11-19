@@ -1,20 +1,23 @@
 # ShopAdmin - E-commerce Admin Dashboard
 
-A full-stack admin dashboard for an e-commerce system built with React, Node.js, Express, and MongoDB.
+A full-stack admin dashboard for an e-commerce system built with React, Node.js, Express, and MongoDB. The interface is a dark "control room" layout with a sidebar, live KPI cards, an SVG revenue curve, a category donut, a staged conversion funnel and a status-coded order table.
 
 ## 🚀 Live Deployment
 
-- **Frontend:** [Vercel Deployment](https://your-vercel-url.vercel.app)
+- **Frontend:** [admindashboard-cedcos-task.vercel.app](https://admindashboard-cedcos-task.vercel.app)
 - **Backend API:** https://admindashboard-cedcos-task.onrender.com/api
 - **Health Check:** https://admindashboard-cedcos-task.onrender.com/api/health
+
+The API degrades gracefully: when MongoDB is unavailable it keeps serving the bundled dashboard snapshots and demo admin credentials, so the hosted demo never dead-ends.
 
 ## ✨ Features
 
 - **Dashboard Metrics:** Total orders, revenue, new customers, average order value
 - **Period Filtering:** View data by Today, This Week, or This Month
-- **Top Products:** Display top 3 best-selling products
-- **Category Revenue:** Visual breakdown of revenue by product category
-- **Order Status:** Track orders by status (Pending, Shipped, Delivered, Cancelled)
+- **Revenue Trend:** SVG area chart with peak annotation and per-point details
+- **Top Products:** Display top 3 best-selling products with revenue share
+- **Category Revenue:** Donut breakdown of revenue by product category
+- **Order Status:** Track orders by status (Delivered, In Transit, Processing, Cancelled)
 - **Conversion Funnel:** Monitor visitor-to-purchase conversion rates
 - **Recent Orders:** View latest order details
 - **Authentication:** Secure admin login with JWT tokens
@@ -146,7 +149,7 @@ ecommerce-task-cedcoss/
    - **Build Command:** `npm install`
    - **Start Command:** `node server.js`
 5. Add environment variables:
-   - `MONGODB_URI`: Your MongoDB Atlas connection string
+   - `MONGODB_URI`: Your MongoDB Atlas connection string (optional — without it the API serves the demo snapshots)
    - `JWT_SECRET`: Generate a secure random string
    - `JWT_EXPIRES_IN`: `12h`
    - `ADMIN_EMAIL`: Your admin email
